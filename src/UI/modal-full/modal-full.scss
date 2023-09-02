@@ -1,0 +1,24 @@
+.modal-full {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  overflow-y: auto;
+
+  &__body {
+    position: absolute;
+    inset: 0;
+    border-radius: 20px 20px 0px 0px;
+    background-color: white;
+    overflow: hidden;
+  }
+
+  &__content {
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  &--full {
+    inset: 0;
+    border-radius: 0;
+  }
+}

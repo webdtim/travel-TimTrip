@@ -1,0 +1,14 @@
+.plan-header {
+  padding: 20px;
+  margin: 20px 0;
+  background-color: #d8d7d7;
+  border-radius: 20px;
+
+  &__title {
+    // display: flex;
+  }
+  &__collapse-toggle {
+    display: flex;
+    gap: 10px;
+  }
+}

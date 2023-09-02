@@ -1,0 +1,25 @@
+.plan-section {
+  &__head {
+    display: flex;
+    gap: 8px;
+  }
+  &__btns {
+    display: flex;
+    gap: 8px;
+    margin-top: 32px;
+  }
+
+  &__gray-icon {
+    svg {
+      color: #adadad;
+    }
+  }
+
+  &--collapsed &__collapse-btn {
+    transform: rotate(-90deg);
+  }
+
+  &--collapsed &__collapse-body {
+    display: none;
+  }
+}

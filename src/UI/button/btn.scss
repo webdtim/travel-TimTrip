@@ -1,0 +1,53 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 48px;
+  padding: 0.5em 1em;
+  border: none;
+  font-size: 16px;
+  color: #414141;
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  svg + span {
+    margin-left: 10px;
+  }
+
+  &--min-width {
+    width: fit-content;
+    padding: 0;
+  }
+
+  &--ellipse {
+    justify-content: center;
+    width: auto;
+    padding: 0;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    // border: 2px solid #d8d8d8;
+
+    svg {
+      max-width: 16px;
+      max-height: 16px;
+    }
+  }
+  // &--sharp {
+  //   border-radius: 0;
+  // }
+  &--smooth {
+    border-radius: 10px;
+  }
+
+  &--transparent {
+    background-color: transparent;
+  }
+
+  &--pos-left {
+    justify-content: start;
+  }
+}

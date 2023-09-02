@@ -1,0 +1,13 @@
+.nav-attraction {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+
+  &__interaction-btns {
+    display: flex;
+    gap: 12px;
+  }
+}

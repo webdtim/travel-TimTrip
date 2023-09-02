@@ -1,0 +1,16 @@
+.search-history {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  &__item {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    padding: 10px 20px;
+    border: 1px solid #606060;
+    border-radius: 20px;
+    font-size: 14px;
+  }
+}

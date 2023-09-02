@@ -1,0 +1,42 @@
+.field-icon {
+  display: flex;
+  position: relative;
+  font-size: 24px;
+  font-weight: 700;
+
+  input {
+    padding: 8px;
+    padding-right: 40px;
+  }
+
+  &__fake {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    max-width: 100%;
+    padding: 8px;
+    border-radius: 10px;
+    color: #adadad;
+    z-index: 1;
+  }
+
+  input:focus + &__fake {
+    background-color: #f3f4f5;
+  }
+
+  &__text {
+    white-space: nowrap;
+    overflow: hidden;
+    visibility: hidden !important;
+  }
+
+  svg {
+    flex-shrink: 0;
+    width: 15px;
+    height: 15px;
+    margin-left: 16px;
+  }
+}

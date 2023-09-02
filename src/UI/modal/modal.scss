@@ -1,0 +1,47 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  overflow-y: auto;
+
+  &__layout {
+    position: absolute;
+    inset: 0;
+    background-color: rgba($color: #000000, $alpha: 0.7);
+  }
+
+  &__body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 20px 20px 0px 0px;
+    background-color: white;
+    overflow: hidden;
+  }
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 0;
+
+    &::before {
+      content: '';
+      width: 40px;
+      height: 4px;
+      border-radius: 4px;
+      background-color: #d9d9d9;
+    }
+  }
+  &__content {
+    max-height: 80vh;
+    padding: 16px;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+
+  &--full {
+    inset: 0;
+    border-radius: 0;
+  }
+}

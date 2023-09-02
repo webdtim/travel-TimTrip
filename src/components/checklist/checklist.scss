@@ -1,0 +1,60 @@
+.checklist {
+  margin-top: 32px;
+  padding: 16px;
+  background: #f5f5f5;
+  border-radius: 10px;
+
+  &__head {
+    display: flex;
+  }
+  &__menu {
+    padding-left: 16px;
+
+    svg {
+      width: fit-content;
+      max-height: 12px;
+      transform: rotate(90deg);
+    }
+  }
+  &__items {
+    margin-top: 12px;
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+  &__add {
+    margin-top: 12px;
+    padding: 5px 12px;
+    border-radius: 5px;
+    background: #ffffff;
+    line-height: 19px;
+    color: #afafaf;
+  }
+}
+
+.checklist-item {
+  display: flex;
+  padding: 4px 16px;
+  background: #f5f5f5;
+  border-radius: 4px;
+
+  &__drag {
+    padding-left: 16px;
+    color: #adadad;
+
+    svg {
+      height: 12px;
+    }
+  }
+
+  &--done textarea {
+    text-decoration: line-through;
+
+    &:placeholder-shown {
+      text-decoration: none;
+    }
+  }
+
+  &--dragging {
+    background-color: #e2e2e2;
+  }
+}

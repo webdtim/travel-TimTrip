@@ -1,0 +1,181 @@
+$carousel-height: 340px;
+
+.gallery-carousel {
+  height: $carousel-height;
+  position: relative;
+  overflow: hidden;
+
+  &__slide {
+    height: $carousel-height;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__dots {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 68px;
+    margin: 0;
+    padding: 12px 24px;
+    background: linear-gradient(
+      180deg,
+      transparent 3%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
+  }
+
+  &__dots-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      width: 100%;
+      margin: 0 5px;
+    }
+  }
+
+  &__dot-btn {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__dot {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 4px;
+    margin: 0;
+    padding: 0;
+    background: hsla(0, 0%, 100%, 0.4);
+    border-radius: 3px;
+    overflow: hidden;
+
+    &--viewed:after {
+      content: '';
+      display: block;
+      height: inherit;
+      background: #fff;
+    }
+  }
+
+  .slick-active &__dot:after {
+    // position: absolute;
+    content: '';
+    display: block;
+    height: inherit;
+    background: #fff;
+    border-radius: 3px;
+    transform: translateX(-100%);
+    animation: thumb 5s linear forwards;
+    animation-play-state: running;
+  }
+
+  .slick-paused &__dot:after {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes thumb {
+  to {
+    transform: none;
+  }
+}
+
+@keyframes imgScale {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+.slide__img {
+  display: block;
+  object-fit: cover;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s, -webkit-transform 0s linear 1s;
+  transition: opacity 1s, transform 0s linear 1s;
+  transition: opacity 1s, transform 0s linear 1s, -webkit-transform 0s linear 1s;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.slide__img--active {
+  pointer-events: auto;
+  -webkit-animation: imgOpacity 1s linear forwards, imgScale 5s linear forwards;
+  animation: imgOpacity 1s linear forwards, imgScale 5s linear forwards;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+.slide__img--paused {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+// как сделать прямоугольные
+.slide__thumbs {
+  overflow-x: hidden;
+  display: flex;
+  flex: 1 1;
+}
+
+.slide__thumb {
+  flex: 1 1;
+  display: block;
+  height: 4px;
+  background: hsla(0, 0%, 100%, 0.4);
+  margin: 3px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.slide__thumb--viewed:after {
+  content: '';
+  display: block;
+  height: inherit;
+  background: #fff;
+  border-radius: 3px;
+}
+
+.slide__thumb--active:after {
+  content: '';
+  display: block;
+  height: inherit;
+  background: #fff;
+  border-radius: 3px;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-animation: thumb 5s linear forwards;
+  animation: thumb 5s linear forwards;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}

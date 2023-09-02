@@ -1,0 +1,16 @@
+body {
+  background-color: #ffffff;
+  font-family: 'Inter', 'Roboto';
+  font-size: 16px;
+  color: #414141;
+}
+
+.body {
+  &--locked-scroll {
+    overflow: hidden;
+  }
+}
+
+.container {
+  margin: 0 14px;
+}

@@ -1,0 +1,16 @@
+.textarea {
+  width: 100%;
+  height: 24px;
+  padding: 0;
+  background-color: initial;
+  border: none;
+  box-shadow: none;
+  color: #212529;
+  outline: none;
+  resize: none;
+  overflow: auto;
+
+  &::placeholder {
+    color: #afafaf;
+  }
+}

@@ -1,0 +1,19 @@
+.attraction {
+  position: relative;
+
+  &__h1 {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  &__rating-and-catergory {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 8px;
+  }
+
+  &__desc {
+    margin-top: 15px;
+  }
+}

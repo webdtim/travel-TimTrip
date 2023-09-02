@@ -1,0 +1,75 @@
+.editor {
+  position: relative;
+
+  &__field {
+    padding: 20px;
+  }
+
+  &__placeholder {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #999;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  &__bold {
+    font-weight: bold;
+  }
+
+  &__italic {
+    font-style: italic;
+  }
+
+  &__underline {
+    text-decoration: underline;
+  }
+
+  &__strikethrough {
+    text-decoration: line-through;
+  }
+
+  &__underlineStrikethrough {
+    text-decoration: underline line-through;
+  }
+
+  &__link {
+    color: rgb(33, 111, 219);
+    text-decoration: none;
+  }
+
+  &__quote {
+    margin: 0;
+    margin-left: 20px;
+    font-size: 15px;
+    color: rgb(101, 103, 107);
+    border-left-color: rgb(206, 208, 212);
+    border-left-width: 4px;
+    border-left-style: solid;
+    padding-left: 16px;
+  }
+
+  &__list-ol {
+    padding: 0;
+    margin: 0;
+    margin-left: 16px;
+  }
+
+  &__list-ul {
+    padding: 0;
+    margin: 0;
+    margin-left: 16px;
+  }
+
+  &__listitem {
+    margin: 8px 32px 8px 32px;
+  }
+
+  &__nested-listitem {
+    list-style-type: none;
+  }
+}
